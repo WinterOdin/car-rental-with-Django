@@ -4,4 +4,6 @@ I always loved one particular car manufacturer so I made this website that let's
 !(all the logos used in this project are owned by Mercedes-Benz and are used only for testing purposes)!
 
 To run this project you need to install all the dependencies in requirements.txt.
-In further releases the gallery will be added
+In further releases the gallery will be added.
+
+If you wanna check out the page there is a screenshot folder
