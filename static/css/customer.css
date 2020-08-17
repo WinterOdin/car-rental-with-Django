@@ -1,0 +1,224 @@
+.backCustomer{
+    height: 7vh;
+}
+a.backLinkCustomer,a.backLinkCustomer:hover,a.backLinkCustomer:visited{
+    text-decoration: none;
+    color:#fcc842; 
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.customerArrow{
+    font-size: 22px;
+}
+
+.backTextCustomer{
+    font-size: 17px;
+    margin-left: 1vh;
+}
+.customerInfo{
+    height: 23vh;
+    position: relative;
+}
+.customerPicture{
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+img.imgCustomer{
+    width: auto;
+    height: 100%;
+   
+}
+.conCustomer{
+    width: auto;
+    height: auto;
+    
+}
+.customerName{
+    color: black;
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    padding: 3vh 1vh;
+    height:8vh;
+    
+}
+.customerId{
+    padding-left: 1vh; 
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+#customerIdNumber{
+    font-weight: 700;
+    display: inline;   
+}
+
+
+
+.customerIdText{
+    display: inline;
+}
+.introduction{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:5vh;
+    border-bottom: 2px solid #fcc842;
+}
+.introductionText{
+    font-family: "Montserrat";
+    font-size: 22px;
+    padding-top: 1vh;
+    color: #fcc842;
+    width: 100%;
+}
+
+.tilesCustomer{
+
+    width: 100%;
+    height: 30vh;
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 2vh;
+}
+.personalTitle{
+    height:6vh;
+    font-family: "Montserrat";
+    font-size: 22px;
+    opacity: 0.8;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding-top: 2vh ;
+    padding-left: 2vh;
+}
+.ageCustomer,.ageDataCustomer{
+    padding-left: 2vh;
+}
+
+.ageCustomer,.cityCustomer,.carCustomer,.dataRegister,.dataTextRegister{
+    font-size: 17px;
+    font-family: "Montserrat"; 
+    font-weight: 500;
+    text-align: left;
+}
+.ageDataCustomer,.dataRegister,.cityDataCustomer,.carDataCustomer{
+    text-align: left;
+    font-size: 16px;
+    font-family: "Montserrat"; 
+    font-weight: 700;
+    color:#fcc842
+}
+.dataTilePosCustomer{
+    margin-top: 3vh;
+    padding-left: 2vh;
+}
+
+
+.containerLastRent{
+    width:100%;
+    height: 5vh;
+    
+}
+
+.customerNumber,.customerEmail{
+    display: none;
+}
+
+.filterBoxCustomer{
+    width: 100%;
+    height:auto;
+    border: 1px solid #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:770px){
+    #customerIdNumber{
+        font-size: 18px;
+    }
+    
+    .tilesCustomer{
+        height: 23vh;
+        border: 2px solid #f0f0f0;
+        margin-top: 3vh;
+    }
+    .ageDataCustomer,.carDataCustomer,.cityDataCustomer,.dataRegister{
+        font-size: 16px;
+        color: #fcc842;
+    }
+    .ageCustomer,.cityCustomer,.carCustomer,.carCustomer,.dataTextRegister{
+        font-size: 16px;
+    }
+    .customerId,.customerNumber,.customerEmail{
+        display: block;
+    }
+    
+    .customerId{
+    padding-top: 4vh ;
+    height: 8vh;
+    
+    }
+    .customerNumber{
+    padding: 3.5vh 1vh;
+    height: 18vh;
+    }
+    .customerIdText{
+        font-family: "Montserrat"; 
+        font-size: 18px;
+        display: block;
+        font-weight: 500;
+    }
+    .customerNumber,.customerEmail{
+        padding-top: 4vh ;
+        height: 8vh;
+    }
+    .numberDataNavCustomer{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .numberNavCustomer{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .customerPicture{
+        display: inline-block;
+        position: relative;
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    img.imgCustomer{
+        width: auto;
+        height: 100%;
+        margin-left: -50px;
+    }
+    .customerName{
+        padding: 3.3vh 4vh;
+    }
+    .ageCustomer,.cityCustomer,.carCustomer,.dataRegister,.dataTextRegister{
+        font-size: 19px;
+    }
+    .ageDataCustomer,.dataRegister,.cityDataCustomer,.carDataCustomer{
+        font-size: 18px;
+    }
+    .dataTilePosCustomer{
+        margin-top:1vh;
+        padding-left: 2vh;
+    }
+    
+  
+  }

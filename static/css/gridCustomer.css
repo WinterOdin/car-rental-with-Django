@@ -1,0 +1,45 @@
+.grid-containerCustomer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1px 1px;
+    grid-template-areas: "backCustomer" "customerInfo" "personalInfo" "lastRent";
+  }
+  
+  .backCustomer { grid-area: backCustomer; }
+  
+  .customerInfo { grid-area: customerInfo; }
+  
+  .personalInfo { grid-area: personalInfo; }
+  
+ /* .contactInfo { grid-area: contactInfo; display: none; }*/
+  
+  .lastRent { grid-area: lastRent; }
+
+
+
+
+
+  .grid-containerTile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "tileCustomer";
+  }
+  
+  .tileCustomer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "ageTileCustomer pickTileCustomer carTileCustomer" "dataTileCustomer dataTileCustomer dataTileCustomer";
+    grid-area: tileCustomer;
+  }
+.ageTileCustomer { grid-area: ageTileCustomer; }
+
+.dataTileCustomer { grid-area: dataTileCustomer; }
+
+.pickTileCustomer { grid-area: pickTileCustomer; }
+
+.carTileCustomer { grid-area: carTileCustomer; }

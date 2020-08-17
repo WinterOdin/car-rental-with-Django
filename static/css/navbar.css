@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  justify-content: center;
+  align-items: center;
+  padding-left: 40%;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  height:10vh;
+}
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #fcc842;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 31px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #fab400;
+}
+
+.cta {
+  padding: 7px 20px;
+  background-color: #fcc842;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 25%;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  position:absolute;
+  right: 5%;
+  top:2%;
+}
+
+.cta:hover {
+  background-color: #fab400;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+  z-index: 10000000;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 30px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #fab400;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 30px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+@media (min-width:720px){
+  header {
+    justify-content: center;
+    align-items: center;
+    padding-left: 38%;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    height:auto;
+  }
+
+  .cta{
+    width: 6.5%;
+  text-align: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+

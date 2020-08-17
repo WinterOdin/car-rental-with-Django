@@ -1,0 +1,19 @@
+.grid-containerLatest {
+    display: grid;
+    width: 90%;
+    
+  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas: "picLastest picLastest picLastest picLastest" "picLastest picLastest picLastest  picLastest" "nameLatest nameLatest nameLatest priceLatest" "stuffLastest stuffLastest stuffLastest stuffLastest";
+  }
+  
+  .picLastest { grid-area: picLastest; }
+  
+  .nameLatest { grid-area: nameLatest; }
+  
+  .priceLatest { grid-area: priceLatest; }
+  
+  .stuffLastest { grid-area: stuffLastest; }
+

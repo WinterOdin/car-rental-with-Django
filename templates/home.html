@@ -1,0 +1,160 @@
+{% extends 'main.html' %}
+{% load static  %}
+{% block content %}
+
+    <div class="wrapper">
+        
+            <div class="nav-dots">
+                <div class="nav-dot" data-slide="4">
+                    <div class="buttonText">GT</div>
+                </div>
+                <div class="nav-dot" data-slide="5">
+                    <div class="buttonText">G Wagon</div>
+                </div>
+                <div class="nav-dot" data-slide="6">
+                    <div class="buttonText">S Class</div>
+                </div>
+                <div class="nav-dot" data-slide="7">
+                    <div class="buttonText">C63</div>
+                </div>
+            </div>
+            
+            {% for car in cars  %}
+            <div class="panel" data-slide="{{ car.id }}">
+                <div class="trans-layer" id="layer-{{ car.id }}"></div>
+                <section class="section" id="section-{{ car.id }}">
+                    <div class="section-content">
+                        <div class="grid-container">
+                            <!---------------------------------------------------------------------------->
+                            <div class="title">
+                                <div class="titleWrapper">
+                                    <div class="titleData">{{ car.model }}</div>
+                                    <div class="description">
+                                        <div class="titleAbout">{{ car.shortAbout  }}
+                                       
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="time">
+                                <div class="timePOS">
+                                    <div class="container">
+                                        <div class="row no-gutters">
+                                            <div class="col-4">
+                                                <div class="borderWrapper">
+                                                    <div class="timeCol">
+                                                        0-100km/h
+                                                    </div>
+                                                    <div class="timeValue">
+                                                        {{ car.time  }}s
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="borderWrapper">
+                                                    <div class="timeCol">
+                                                        Nm
+                                                    </div>
+                                                    <div class="timeValue">
+                                                        {{ car.nm  }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4"">
+                                                <div class="borderWrapper">
+                                                    <div class="timeCol">
+                                                        Hp
+                                                    </div>
+                                                    <div class="timeValue">
+                                                        {{ car.hp  }}
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="chose">
+                            
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="car1">
+                                <div class="car1Wrapper">
+                                    <div class="car1Data">
+                                        <img src="{{ car.car1.url  }}" class="img-responsive"alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="car2">
+                                <div class="car2Wrapper">
+                                    <div class="car2Data">
+                                        <img src="{{ car.car3.url }}" class="img-responsive"alt="">
+                                    </div>
+                                </div>
+                                    <div class="container-fluid buttonMobile">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-4 d-flex justify-content-center align-self-center">                                     
+                                                <div class="prev-btn ">
+                                                    <span class="fa fa-angle-up"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-end align-self-center">
+                                                
+                                                    <button class="btn"><a href="">RENT IT NOW!</a></button>
+                                                     
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-self-center">
+                                                <div class="justDiv">
+                                                    <div class="next-btn">
+                                                        <span class="fa fa-angle-down"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="car3">
+                                <div class="car3Wrapper">
+                                    <div class="car3Data">
+                                        <img src="{{  car.car2.url  }}" class="img-responsive"alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="link">8</div>
+                            <!---------------------------------------------------------------------------->
+                            <div class="petronas">
+                                {%  include 'bar.html' %}
+                               <div class="petronasLogo">
+                                <div class="container">
+                                    <div class="row ">
+                                        <div class="col-1"></div>
+                                        <div class="col-10 d-flex justify-content-center align-self-center">
+                                            <div class="petronsPic">
+                                                <img  src="{% static "images/logo.png" %}" class="img-responsive picPetro"alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                            <!---------------------------------------------------------------------------->
+                        </div>
+                    </div>
+                </section>
+            </div> 
+        {% endfor  %}
+        
+    </div>
+    
+    {%  include 'login.html' %}
+{% endblock %}
+

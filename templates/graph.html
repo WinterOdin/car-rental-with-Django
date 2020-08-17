@@ -1,0 +1,420 @@
+{% extends 'main.html' %}
+{% load static  %}
+{% block content %}
+<script>
+    $(document).ready(function(){
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [  
+            {% for x in orderedCarsName  %}
+                '{{ x  }}',
+            {% endfor  %}
+                
+        ],
+        datasets: [{
+            label: 'Cars',
+            data: [
+            {% for x in orderedCarsQuantity  %}
+                '{{ x  }}',
+            {% endfor  %}
+
+            ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+
+    var income = document.getElementById('dailyIncome').getContext('2d');
+    var dailyIncome = new Chart(income, {
+        type: 'line',
+        data: {
+            labels: [  
+                {% for x in dailyDate  %}
+                    '{{ x  }}',
+                {% endfor  %}
+                    
+            ],
+            datasets: [{
+                label: 'Daily income',
+                data: [
+                {% for x in dailyMoney  %}
+                    '{{ x  }}',
+                {% endfor  %}
+
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
+
+    var location = document.getElementById('locationData').getContext('2d');
+    var locationData = new Chart(location, {
+        type: 'polarArea',
+        data: {
+            labels: [  
+                {% for x in placeName  %}
+                    '{{ x  }}',
+                {% endfor  %}
+                    
+            ],
+            datasets: [{
+                label: 'Busiest pickup places',
+                data: [
+                {% for x in placeQuantity  %}
+                    '{{ x  }}',
+                {% endfor  %}
+
+                ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
+
+
+    });
+</script>
+
+
+<div class="container-fluid over">
+    <div class="row">
+        <div class="col-md-4 col-12">
+            <canvas id="myChart" width="100%" height="50%"></canvas>
+        </div>
+        <div class="col-md-4">
+            <div class="dashboardTitle">
+                AMG experience admin dashboard
+            </div>
+            <div class="dashboardPic">
+                <img class="dashPic" src="{% static 'images/icon.png'  %}">  
+            </div>
+        </div>
+        <div class="col-md-4 col-12">
+            <canvas id="dailyIncome" width="100%" height="50%"></canvas>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-4 col-12">
+            
+        </div>
+        <div class="col-md-4 col-12">
+            <canvas id="locationData" width="100%" height="50%"></canvas>
+        </div>
+        <div class="col-md-4 col-12">
+          
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="addCarTitle">
+                add new car
+            </div>
+        </div>
+    </div>
+        <form method="POST" >
+        {% csrf_token  %}
+            <div class="row">
+                <div class="col-md-4">
+                   
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="inputFieldGraph modelGraph"type='text' name='model' placeholder="Our new AMG car">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-3">
+                            <input class="inputFieldGraph performanceData "type='text' name='time' placeholder="0-100/s">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="inputFieldGraph  performanceData "type='text' name='topSpeed' placeholder="top speed">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="inputFieldGraph  performanceData "type='text' name='nm' placeholder="newton-meter">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="inputFieldGraph  performanceData "type='text' name='hp' placeholder="horse power">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="lastCarInfo">
+                        
+                        </div>
+                            <div class="col-md-4">
+                                <input class="inputFieldGraph  performanceData "type='text' name='price' placeholder="price per day">
+                            </div>
+                            <div class="col-md-4">
+                                <select name="year" id="" class="pickUpPlace selectYearGraph">
+                                    {% for i in year  %}
+                                    <option value="{{  i.pk  }}">{{ i.name  }}</option>
+                                    {% endfor  %}
+                                </select>
+                               
+                            </div>
+                            <div class="col-md-4">
+                                <input class="inputFieldGraph  performanceData "type='text' name='seats' placeholder="seats">
+                            </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="titleAddCar">
+                                ADD PICTURES
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+
+                                </div>
+                                <div class="col-6">
+                                    <img id="pic-1" alt="" width="100%" height="auto" />
+                                </div>
+                                <div class="col-3">
+
+                                </div>
+
+                            </div>
+                            <label>First picture</label>
+                            <input  name="car1" class="inputFieldGraph"type="file" onchange="document.getElementById('pic-1').src = window.URL.createObjectURL(this.files[0])" placeholder="main picture">
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-4">
+                   
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row ">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    
+                                    <div class="row">
+                                        <div class="col-3">
+                
+                                        </div>
+                                        <div class="col-6">
+                                            <img id="pic-2" alt="" width="100%" height="auto" />
+                                        </div>
+                                        <div class="col-3">
+                
+                                        </div>
+                
+                                    </div>
+                                    <label>Second picture</label>
+                                    <input name="car2" class="inputFieldGraph"type="file" onchange="document.getElementById('pic-2').src = window.URL.createObjectURL(this.files[0])" placeholder="main picture">
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    
+                                    <div class="row">
+                                        <div class="col-3">
+                
+                                        </div>
+                                        <div class="col-6">
+                                            <img id="pic-3" alt="" width="100%" height="auto" />
+                                        </div>
+                                        <div class="col-3">
+                
+                                        </div>
+                
+                                    </div>
+                                    <label>Third picture</label>
+                                    <input name="car3" class="inputFieldGraph"type="file" onchange="document.getElementById('pic-3').src = window.URL.createObjectURL(this.files[0])" placeholder="main picture">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row ">
+                                <div class="col-12">
+                                    
+                                    <div class="row">
+                                        <div class="col-3">
+                
+                                        </div>
+                                        <div class="col-6">
+                                            <img id="pic-4" alt="" width="100%" height="auto" />
+                                        </div>
+                                        <div class="col-3">
+                
+                                        </div>
+                
+                                    </div>
+                                    <label>Foutrh picture</label>
+                                    <input name="car4" class="inputFieldGraph"type="file" onchange="document.getElementById('pic-4').src = window.URL.createObjectURL(this.files[0])" placeholder="main picture">
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row ">
+                                <div class="col-12">
+                                    
+                                    <div class="row">
+                                        <div class="col-3">
+                
+                                        </div>
+                                        <div class="col-6">
+                                            <img id="pic-5" alt="" width="100%" height="auto" />
+                                        </div>
+                                        <div class="col-3">
+                
+                                        </div>
+                
+                                    </div>
+                                    <label>Fifth picture</label>
+                                    <input name="car5" class="inputFieldGraph"type="file" onchange="document.getElementById('pic-5').src = window.URL.createObjectURL(this.files[0])" placeholder="main picture">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+                    <div class="shortAboutText">
+                        <textarea maxlength="70" rows="2" cols="10" name="shortAbout" class="form-control textareaCar" id="message" placeholder="Short text about the car max 70 character" tabindex="4" required></textarea>
+                    </div>
+                    <div class="longAboutText">
+                        <textarea maxlength="355" rows="5" cols="10" name="about" class="form-control textareaCar" id="message" placeholder="Long text about the car max 355 character" tabindex="4" required></textarea>
+                    </div>
+                </div>
+                <div class="col-4">
+                    
+                </div>
+            </div>
+     
+            <div class="row">
+                <div class="col-md-4 col-4">
+
+                </div>
+                <div class="col-md-4 col-4">
+                    <div class="submitAddCar">
+                        <button type="submit" class="raise raiseGraph">Submit</button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4">
+
+                </div>
+            </div>
+        </form>
+</div>
+
+
+
+
+
+
+
+{% endblock  %}

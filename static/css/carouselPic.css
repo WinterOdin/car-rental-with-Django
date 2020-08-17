@@ -1,0 +1,256 @@
+
+.car1Data>img{
+    max-width: 100%;
+    
+}
+.car2Data img,.car3Data img{
+display: none
+}
+
+.titleData{
+    position: relative;
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    opacity: .7;
+    color: #000;
+    text-align:center;
+    margin-left: 10px;
+    padding-top:10px;
+}
+.titleAbout{
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    text-align:center;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-left: 10px;
+    color: #000;
+    opacity: .8;
+}
+
+.buttonMobile{
+    width: 100%;
+    height: 100%;
+  
+}
+.color{
+  background-color: chocolate;
+  width: 100%;
+
+}
+.btnTitle{
+  border: none;
+  background-color: #fcc842 !important;
+  border-radius: 16px;
+  font-size: 13px;
+  padding: 6px;
+  display: none;
+  color: white ;
+}
+.btnTitle a{
+ 
+  color: white ;
+}
+
+.btn,.btnTitle a{
+    color:white;
+    text-decoration: none;
+  }
+  .btn,.btnTitle a:hover{
+    color:white;
+  }
+  .btn,.btnTitle a:active{
+    color:white;
+  }
+  
+  button.btn {
+   
+    margin-left: 2%;
+    position: relative;
+    display: inline-block;
+    padding: 5% 5%;
+    border: 0;
+    transform: translateY(45%);
+    border-radius: 30px;
+    text-align: center;
+    color: white !important;
+    cursor: pointer;
+    background-color: #fcc842 !important;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    z-index: 9999;
+  }
+  button.btn a {
+    color: white;
+  }
+  .btn,.btnTitle:hover {
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  }
+  .btn,.btnTitle:active {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.15);
+  }
+  .btn,.btnTitle:focus {
+    outline: none;
+  }
+
+.timePOS{
+    padding-top:10%;
+  }
+.borderWrapper{
+    border-right: 1px solid black;
+    opacity: 0.7;
+    width:90%;
+}
+.timeCol{
+    text-align: right;
+    font-size: 17px;
+    font-family: Roboto;
+    font-weight: 400;
+    opacity: 0.7;
+    padding-right: 10%;
+    color: black;
+    height: 30%;
+   
+}
+.timeValue{
+    text-align: right;
+    padding-right: 10%;
+    font-size: 34px;
+    font-family: Roboto;
+    font-weight: 700;
+    margin-top: -15px;
+    color: black;
+}
+.petronasWrapper{
+  width: 100%;
+  display: none;
+  height: 100%;
+}
+.petronsPic{
+ padding-top: 5vh;
+ display: block;
+}
+.picPetro{
+  min-width: 105%;
+}
+@media (min-width:720px){
+  .car1Data>img{
+    max-width: 100%;
+    margin-top: -5%;
+}
+    .car2Data img{
+        max-width: 100%;
+        right: 5%;
+        display: block;
+        position: relative;
+    }
+    .car3Data>img{
+        max-width: 100%;
+        right: 5%;
+        position: relative;
+        display: block;
+    }
+    .titleData{
+        font-size: 60px;
+        opacity: .8;
+        text-align: left;
+        margin-left: 12vh;
+        padding-top: 10%;
+    }
+    .titleAbout{
+        font-size: 25px;
+        text-align: left;
+        opacity: .8;
+        margin-left: 12vh;  
+    }
+ 
+    button.btnTitle {
+      padding-left: 2%;
+      margin-left: 2%;
+      position: relative;
+      display: inline-block;
+      padding: 1% 5%;
+      border: 0;
+      transform: translateY(-5%);
+      border-radius: 30px;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      background-color: #fcc842 !important;
+      letter-spacing: 1px;
+      font-size: 12px;
+      font-family: 'Roboto';
+      font-weight: 400;
+      z-index: 9999;
+    }
+    
+    .timePOS{
+        position: relative;
+        top: 10%;
+        max-width: 75%;
+        left: 0;
+      }
+   
+    .timeCol{
+        text-align: right;
+        font-size: 22px;
+        padding-right: 15%;
+        height: 30%;
+       
+    }
+    .timeValue{
+        text-align: right;
+        padding-right: 10%;
+        font-size: 36px;
+        margin-top: -15px;
+       
+    }
+    .buttonMobile{
+      display: none;
+  }
+  .petronasWrapper{
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+  .carsList{
+    color: #000;
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-top:10vh;
+    padding-bottom: 0.5vh;
+    opacity: 0.2;
+  }
+  .carActive{
+    opacity: 1;
+    border-bottom: #fcc842 5px solid;
+  }
+   .barNav{
+    color: #000;
+    font-size:28px;
+    font-family: 'Roboto';
+    padding-top:10vh;
+    padding-bottom: 0.5vh;
+    width: 100%;
+   }
+   .navpic{
+    max-width: 100%;
+}
+.navPicPos{
+    position: relative;
+    margin-top:8vh;
+    margin-bottom: 0.5vh;
+}
+.petronsPic{
+  display: none;
+}
+  }

@@ -1,0 +1,217 @@
+
+.wrapper {
+    position: relative;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto
+}
+
+.panel._active {
+    z-index: 10
+}
+
+.section,
+.trans-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.trans-layer {
+    background: #fff;
+    -webkit-transform: translateY(-100%) skew(0) rotate(0) scale(2);
+    transform: translateY(-100%) skew(0) rotate(0) scale(2);
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    transition-delay: .5s
+}
+
+._active .trans-layer {
+    -webkit-transform: translateY(0) skew(0) rotate(0) scale(2);
+    transform: translateY(0) skew(0) rotate(0) scale(2);
+    transition-delay: 0s;
+    opacity: 1
+}
+
+.section {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: all .5s ease-in-out;
+    transition-delay: 0s
+}
+
+._active .section {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition-delay: .5s
+}
+
+.section-content {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0s;
+    background-color: #fff
+}
+
+._active .section-content {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition-delay: 1s
+}
+
+.nav-dots {
+    display: none;
+}
+
+.nav-dot>.buttonText {
+    position: relative;
+    left:5vw;
+    top:-1vh;
+    width: 40vw;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 10px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background-color: #fcc842;
+    cursor: pointer;
+    transition: all .3s ease-out
+}
+
+.nav-dot.active {
+    background-color: #fcc842;
+    font-size: 17px;
+    color: #fcc842;
+    letter-spacing: 4px;
+    font-weight: 700
+}
+
+.next-btn,
+.prev-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 20;
+    border: 1px solid #fcc842;
+    border-radius: 6px;
+    color: #fcc842;
+    line-height: 20px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+@media (min-width:720px){
+    .nav-dots {
+        position: absolute;
+        top: 45%;
+        right: 10px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 20;
+        width: 40px;
+        left: 2%;
+        display:block;
+    }
+    
+    .nav-dot>.buttonText {
+        position: relative;
+        left:2vw;
+        top:-1vh;
+        font-family: 'Roboto', sans-serif;
+        width: 10vw;
+
+    }
+    
+    .nav-dot {
+        width: 12px;
+        height: 10px;
+        margin: 20px auto;
+        border-radius: 50%;
+        background-color: #fcc842;
+        cursor: pointer;
+        transition: all .3s ease-out
+    }
+    
+    .nav-dot.active {
+        background-color: #fcc842;
+        font-size: 17px;
+        color: #fcc842;
+        letter-spacing: 2px;
+        font-weight: 700
+    }
+    
+    .next-btn,
+    .prev-btn {
+        width: 40px;
+        height: 40px;
+        z-index: 20;
+        border: 1px solid #fcc842;
+        border-radius: 6px;
+        color: #fcc842;
+        line-height: 35px;
+        text-align: center;
+        font-size: 35px;
+        cursor: pointer;
+        position: relative;
+        margin-top:10vh;
+        margin-bottom: 0.5vh;
+        
+    }
+    
+ 
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 100px
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, .09)
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 100px
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .61);
+    -webkit-border-radius: 100px
+}

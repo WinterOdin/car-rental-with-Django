@@ -1,0 +1,53 @@
+{% load static %}
+<div class="sizeUs">
+    <div class="container" id='faqs'>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="faqUs">
+                    faq
+                </div>
+                <div class="faqTextUs">
+                    what do you need to know
+                </div>
+                {% for x in faqs  %}
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 clickFaq">
+                        <div class="questionUs">
+                            <div class="numberUs ">0{{ x.id  }}</div>
+                            <div class="textUs">{{ x.question  }}</div>
+                            <i class="fas fa-arrow-circle-down .displayFaq arrowsUS"></i>
+                            
+                        </div>
+                        <div class="faqTextAnswer open">
+                            {{ x.content  }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor  %}
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="placeholderPicFaq">
+                    
+                        <img class="pictUsFaq" src="{% static 'images/icon.png'  %}">  
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aboutUsTitle">
+                    Why Us
+                </div>
+                <div class="aboutUsText">
+                    To the company, sustainability means creating value for all stakeholders on a lasting basis: customers, employees, investors, business partners and the society as a whole. The basis for this is the sustainable business strategy of Daimler in which the company takes responsibility for the economic, ecological and social effects of its business activities and looks at the entire value chain.
+                </div>
+            </div>
+         
+        </div>
+    </div>
+
+
+
+
+</div>

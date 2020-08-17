@@ -1,0 +1,112 @@
+.wrapperUpdate{
+    width: 100%;
+    height: 180vh;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0.6;
+    overflow-x: hidden;
+}
+.blockUpdate{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(250, 250, 249);
+    z-index: 12;
+    position: absolute;
+    left: 10vw;
+    top:10vh;
+    border-radius: 10px;
+    opacity: 1;
+}
+.exitUpdate{
+   position:absolute;
+    top:2vh;
+    right: 2vw;
+}
+.exitIconUpdate{
+    font-size: 23px;
+    color: #fcc842;
+}
+.updateGreetingText{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 5%;
+    font-style: italic;
+}
+.customerPictureUpdate{
+    margin-left: 5%;
+    margin-top: 25%;
+}
+.inputBoxCustomer{
+    width: 100%;
+    padding-top: 5%;
+}
+input.inpBoxCustomer{
+    width: 90%;
+    margin-left: 5%;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    border-bottom: 2px solid #fcc842;
+    
+}
+
+.submitUpdate{
+    margin-top: 10%;
+}
+.buttonOrderPos{
+    margin-top: 2vh;
+    width: 100%;
+    height: 12vh;   
+}
+.boxImgUpdate{
+    margin-left: 2vh;
+    width: 90%;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fcc842;
+}
+
+@media (min-width:770px){
+    .blockUpdate{
+        width: 80vw;
+        height: 80vh;
+        left: 10vw;
+        top:10vh;
+   
+    }
+    .updateGreetingText{
+        width: 60%;
+        margin-left: 22%;
+        padding-top: 2%;
+        padding-bottom: 1%;
+    }
+    .submitUpdate{
+        margin-left: 35%;
+    }
+    .updateGreetingText{
+        width: 100%;
+    }
+    .customerPictureUpdate{
+        margin-left: 35%;
+        margin-top: 15%;
+    }
+    .buttonOrderPos{
+        margin-top: 3vh; 
+    }
+    .boxImgUpdate{
+        margin-left: 3vh;
+        width: 90%;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #fcc842;
+    }
+    .updateTitle{
+        margin-bottom: 0vh;
+        padding-top: 0vh !important;
+        height: 5vh;
+    }
+}
+
+  

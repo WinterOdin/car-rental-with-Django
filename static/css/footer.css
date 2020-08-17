@@ -1,0 +1,118 @@
+.timeWrapperFooter{
+
+    min-width: 100%;
+  }
+  .dayDateFooter,.hoursFooter,.timeZoneFooter{
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 300;
+    padding:10px;
+  }
+  .dayDateFooter,.timeZoneFooter{
+    font-weight: bold;
+  }
+  .wrapperTermsFooter,.faqTermsFooter {
+    text-align: center;
+    font-family: "Montserrat";
+    opacity:0.8;
+    font-size: 15px;
+  }
+  .bordersFooterMobile{
+    border: 2px solid black;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  .wrapperTermsFooter >a{
+    text-decoration: none;
+    color: black
+  }
+  .faqTermsFooter >a{
+    text-decoration: none;
+    color: black
+  }
+  .wrapperTermsFooter >a:hover{
+    text-decoration: underline;
+  
+  }
+  .faqTermsFooter >a:hover{
+    text-decoration: underline;
+  
+  }
+  .countryFooter,.numberFooter{
+    display: inline-block;
+    padding-left: 3px;
+  }
+  .phonesFooter{
+    text-align: center;
+    padding: 4px;
+  }
+  .callFooter,.countryFooter,.numberFooter{
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
+  .callFooter{
+    color:black;
+    font-size: 19px;
+    letter-spacing: -1px;
+    padding-bottom: 10px
+  }
+  .countryFooter{
+    color:black;
+    font-size: 17px;
+  }
+  .numberFooter{
+    color:#fcc842;
+    font-size: 17px;
+  }
+  .whoFooter{
+    min-width: 100%;
+    text-align: center;
+    padding-top: 10%;
+    font-family: "Montserrat";
+  }
+  .whoFooter >a.linkWinterFooter, a.linkWinterFooter:active, a.linkWinterFooter:visited{
+    text-decoration: none;
+    color:#fcc842;
+  }
+  .whoFooter a.linkWinterFooter:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .linesBig{
+    display: none;
+  }
+    @media (min-width:720px){
+      .bordersFooterMobile{
+        display: none;
+      }
+      .placePosFooter{
+        margin-top: 4vh;
+      }
+      .timeWrapperFooter{
+        align-items: center;
+  
+      }
+      .whoFooter{
+        padding-top: 0;
+      }
+      .linesBig{
+        display: block;
+      }
+      .borderLinesBig{
+        width: 90%;
+        border: 2px solid #fcc842;
+        margin-top: 30px;
+      }
+      .textPc{
+        font-family: "Montserrat";
+        font-weight: 300;
+        color:black;
+        font-size: 42px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+  
+    }
+  

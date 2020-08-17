@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% load static  %}
+{% block content %}
+<div class="BenzRent">
+  </div>
+  <div class="signup__container">
+    <div class="container__child signup__thumbnail">
+      <div class="thumbnail__logo">
+
+      </div>
+     
+  
+      <div class="signup__overlay"></div>
+    </div>
+    <div class="container__child signup__form">
+      <form action="" method="POST">
+        {% csrf_token  %}
+        <div class="form-group">
+          <label for="username">Username</label>
+          {{ forms.username  }}
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          {{ forms.email  }}
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          {{ forms.password1  }}
+        </div>
+        <div class="form-group">
+          <label for="passwordRepeat">Repeat Password</label>
+          {{ forms.password2 }}
+        </div>
+        <div class="m-t-lg">
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-4">
+                      <input class="btn btn--form" type="submit" value="Register" />
+                </div>
+                <div class="col-8">
+                  <div class="login__div">
+                    <a class="signup__link" href="{% url 'home' %}">I am already a member</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  {% endblock %}

@@ -1,0 +1,279 @@
+{% extends 'main.html' %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="linkRent">
+                <a class="backLinkCustomer" href="{% url 'home'  %}">
+                    <i class="fas fa-arrow-circle-left customerArrow"></i>
+                    <span class="backTextCustomer">Back to home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <form action="{% url 'makeOrder' pk=carData.pk  %}" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="conUserData">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tileTitle">
+                                Renter data
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                User name:
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="UserData">
+                                <input class="readOnlyForm" value=" {{current.customer}}" readonly name='user'> </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Contact phone:
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="UserData">
+
+                                <input class="readOnlyForm" value="{{ current.customer.phone}}" readonly name='phone'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Car model:
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="UserData">
+                                <input class="readOnlyForm" value=" {{ carData.model  }}" readonly name='carModel'>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Price per day:
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="UserData" id='priceField'>
+                                {{ carData.price }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="conDateData">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tileTitle">
+                                Pick your date
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Pick Up Date:
+                            </div>
+                        </div>
+                        <div class="col-7">
+
+                            <input type="text" class="dateselect startDateJq " required="required" name='startDate' />
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Drop off date:
+                            </div>
+                        </div>
+                        <div class="col-7">
+
+                            <input type="text" class="dateselect  endDateJq" required="required" name='endDate' />
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Pick up place:
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <select name="pickUpPlace" id="" class="pickUpPlace">
+                                {% for i in pickupPlace  %}
+                                <option value="{{  i.pk  }}">{{ i.pickUpPlace  }}</option>
+                                {% endfor  %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="conDateData">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tileTitle">
+                                Additional options
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+
+                                Full fuel tank:
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="UserData">
+                                <input class="tgl tgl-flat fuel" id="cb1" type="checkbox" name="fuel" />
+                                <label class="tgl-btn" for="cb1"></label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Insurance:
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="UserData">
+                                <input class="tgl tgl-flat insurance " id="cb2" type="checkbox" name="insurance" />
+                                <label class="tgl-btn" for="cb2"></label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="insuranceText">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="textUserData">
+                                Total costs:
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="UserData">
+                                <div class="priceTotal">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="UserData">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="conDateData">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tileTitle">
+                                Payment info
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="infoRenting">
+                                In the next step you will be able to print out booking confirmation and make a payment.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-4 col-4"></div>
+                        <div class="col-md-4  col-4" >
+                            <div class="orderButton">
+                                <button type='submit' class="raise">ORDER</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</form>
+</div>
+<script>
+    var data            = JSON.parse("{{dataClean|escapejs}}"); 
+    var currentDate     = new Date();
+    var currentPrice    = $('#priceField').text();
+      // we are taking this price in unsafe way becaouse we don't use this data to calculate the price in the backend
+    var fuel            = {{priceOfAddi.fuel}};
+    var insurance       = {{priceOfAddi.insurance}};
+  
+
+    $('.dateselect').datepicker({
+        format: 'yyyy/mm/dd',
+        autoclose:true,
+        datesDisabled:data,
+        startDate: currentDate ,
+    });
+    $('.dateselect').datepicker()
+    .on('changeDate', function() {
+        var startDate   = new Date($(".startDateJq").val());
+        var endDate     = new Date($(".endDateJq").val());
+        var diffDate    = (endDate  - startDate) / (1000 * 60 * 60 * 24);
+        var days        = Math.round(diffDate);
+        console.log(days)
+        var price       = (currentPrice * days)
+        $(".priceTotal").html(price);
+
+        $(".insurance, .fuel").on('change',function(){
+            if(  $(".insurance").is(':checked') &&  $(".fuel").is(':checked') ){
+                $(".priceTotal").html(price+insurance+fuel)
+                
+            }else if(  $(".insurance").is(':checked') &&  !($(".fuel").is('unchecked')) ){
+                $(".priceTotal").html(price+insurance)
+
+            }else if(  !($(".insurance").is('unchecked')) &&  $(".fuel").is(':checked') ){
+                $(".priceTotal").html(price+fuel)
+                $(".insuranceText").toggle();
+            }
+            else if(  !($(".insurance").is('unchecked')) &&  !($(".fuel").is('unchecked')) ){
+                $(".priceTotal").html(price)
+            }
+        });
+       
+
+
+
+       
+    });
+</script>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,143 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="textCarSearch textLatest">
+                Or...<br/> 
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for x in carLatest   %}
+        <div class="col-md-4 col-sm-12">
+            <div class="marginLeftLatest">
+                <a class="linkLastest" href="{% url 'carPage' pk=x.pk %}">
+                    <div class="grid-containerLatest">
+                        <div class="picLastest"> 
+                            <div class="picLastetSize">
+                                <img class="responsiveLatest" src="{{ x.car1.url  }}">
+                            </div>
+                        </div>
+                        <div class="nameLatest">
+                            <div class="nameLastestSize">
+                                <div class="nameLastestBrand">
+                                    {{ x.marka  }}
+                                </div>
+                                <div class="nameLastestModel">
+                                    <i>{{ x.model }}</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="priceLatest">
+                            <div class="priceLastestSize">
+                                {{ x.price  }}$
+                            </div>
+                        </div>
+                        <div class="stuffLastest">
+                            <div class="stuffLastestSize">
+                                <div class="stuffLatestPos">
+                                <div class="iconWrapper">
+                                    <div class="iconTimeLatest">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.time  }}s
+                                    </div>
+                                </div>
+                                <div class="iconWrapper">
+                                    <div class="iconTimeLatest">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.nm  }}nm
+                                    </div> 
+                                </div>
+                                <div class="iconWrapper">
+                                    <div class="iconHpLatest">
+                                        <i class="fas fa-horse"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.hp  }}hp
+                                    </div>
+                                </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+            
+        </div>
+        {% endfor  %}  
+    </div>
+    <div class="row">
+        {% for x in carLatestSecond   %}
+        <div class="col-md-4 col-sm-12">
+            <div class="marginLeftLatest">
+                <a class="linkLastest" href="{% url 'carPage' pk=x.pk %}">
+                    <div class="grid-containerLatest">
+                        <div class="picLastest"> 
+                            <div class="picLastetSize">
+                                <img class="responsiveLatest" src="{{ x.car1.url  }}">
+                            </div>
+                        </div>
+                        <div class="nameLatest">
+                            <div class="nameLastestSize">
+                                <div class="nameLastestBrand">
+                                    {{ x.marka  }}
+                                </div>
+                                <div class="nameLastestModel">
+                                    <i>{{ x.model }}</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="priceLatest">
+                            <div class="priceLastestSize">
+                                {{ x.price  }}$
+                            </div>
+                        </div>
+                        <div class="stuffLastest">
+                            <div class="stuffLastestSize">
+                                <div class="stuffLatestPos">
+                                <div class="iconWrapper">
+                                    <div class="iconTimeLatest">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.time  }}s
+                                    </div>
+                                </div>
+                                <div class="iconWrapper">
+                                    <div class="iconTimeLatest">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.nm  }}nm
+                                    </div> 
+                                </div>
+                                <div class="iconWrapper">
+                                    <div class="iconHpLatest">
+                                        <i class="fas fa-horse"></i>
+                                    </div>
+                                    <div class="timeContentLatest">
+                                        {{ x.hp  }}hp
+                                    </div>
+                                </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor  %}  
+    </div>
+  
+      
+  
+</div>

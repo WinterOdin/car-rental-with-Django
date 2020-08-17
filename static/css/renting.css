@@ -1,0 +1,351 @@
+.backLinkCustomer{
+    margin-left: 3vw;
+    padding-bottom: 3vh !important;
+}
+.tileTitle{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 20px;
+    color: #fcc842;
+    margin-bottom: 0.5vh;
+    margin-top: 0.5vh;
+}
+.conUserData,.conDateData{
+    width: 100%;
+    height: 30vh;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+.textUserData{
+    text-align: left;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    font-family: "Montserrat";
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+}
+.UserData{
+    text-align: left;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+}
+
+
+input.dateselect {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fcc842;
+    border-radius: 5px;
+    outline: none;
+    height: 45px;
+    width: 80%;
+    font-size: 18px;
+    padding-top: 0.5vh;
+    box-shadow: none;
+    box-sizing: content-box;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Montserrat';
+
+  }
+
+  .pickUpPlace {
+    padding: 15px 5px;
+    border: 0;
+    font-size: 14px;
+    width: 80%;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Montserrat';
+    border-bottom: 1px solid #fcc842;
+}
+.infoRenting{
+    width: 90%;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    margin-left: 5%;
+    font-weight: 500;
+    padding-top: 5%;
+    text-align: center;
+}
+.orderButton{
+    width: 20%;
+    margin-top: 4%;
+    
+    
+}
+  
+.raise:hover, .raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+  }
+  
+  .raise {
+    --color: #fcc842;
+    --hover: #fcc842;
+  }
+  
+  button.raise:hover, button.raise:focus {
+    border-color: var(--hover);
+    color: #fcc842;;
+  }
+  
+  
+  
+  button.raise {
+   background: none;
+   border: 2px solid;
+   font: inherit;
+   line-height: 1;
+   margin: 2vh 1vw;
+   padding: 1em 2em;
+   color: var(--color);
+   -webkit-transition: 0.25s;
+   transition: 0.25s;
+  
+  }
+  input.readOnlyForm{
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-family: "Montserrat";
+    font-weight: 700;
+    max-width: 80%;
+    font-size: 18px;
+}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.tgl {
+    display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+    box-sizing: border-box;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+    background: none;
+}
+.tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+.tgl + .tgl-btn:after {
+    left: 0;
+}
+.tgl + .tgl-btn:before {
+    display: none;
+}
+.tgl:checked + .tgl-btn:after {
+    left: 50%;
+}
+
+.tgl-flat + .tgl-btn {
+    padding: 2px;
+    transition: all 0.2s ease;
+    background: #fff;
+    border: 4px solid #f2f2f2;
+    border-radius: 2em;
+}
+.tgl-flat + .tgl-btn:after {
+    transition: all 0.2s ease;
+    background: #f2f2f2;
+    content: "";
+    border-radius: 1em;
+}
+.tgl-flat:checked + .tgl-btn {
+    border: 4px solid #fcc842;
+}
+.tgl-flat:checked + .tgl-btn:after {
+    left: 50%;
+    background: #fcc842;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:377px){
+    .conUserData,.conDateData{
+        height: 34vh ;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width:720px){
+  
+    .conUserData,.conDateData{
+        
+        border: 2px solid #f2f2f2;
+        margin-bottom: 1.7vh;
+        height: 26vh ;
+    }
+    .tileTitle{
+        padding-left:2vh;
+        padding-top: 2vh;
+    }
+    .linkRent{
+        padding-bottom: 3vh !important;
+    }
+    
+    input.dateselect {
+        padding-top: 0.7vh;
+    
+      }
+
+
+    }
+      
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  /*Bootstrap Calendar*/
+  .datepicker {
+      border-radius: 0;
+      padding: 0;
+  }
+  .datepicker-days table thead, .datepicker-days table tbody, .datepicker-days table tfoot {
+      padding: 10px;
+      display: list-item;
+  }
+  .datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+      background: #fcc842 !important;
+      color: #ffffff;
+      border-radius: 0;
+  }
+  .datepicker-days table thead tr:nth-child(2n+0) td, .datepicker-days table thead tr:nth-child(2n+0) th {
+      border-radius: 3px;
+  }
+  .datepicker-days table thead tr:nth-child(3n+0) {
+      text-transform: uppercase;
+      font-weight: 300 !important;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+  }
+  .table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+      padding: 11px 13px;
+  }
+  .datepicker-months table thead td, .datepicker-months table thead th, .datepicker-years table thead td, .datepicker-years table thead th, .datepicker-decades table thead td, .datepicker-decades table thead th, .datepicker-centuries table thead td, .datepicker-centuries table thead th {
+      border-radius: 0;
+  }
+  .datepicker td, .datepicker th {
+      border-radius: 50%;
+      padding: 0 12px;
+  }
+  .datepicker-days table thead, .datepicker-months table thead, .datepicker-years table thead, .datepicker-decades table thead, .datepicker-centuries table thead {
+      background:#fcc842 !important;
+      color: #ffffff;
+      border-radius: 0;
+  }
+  .datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+      background-image: none;
+  }
+  .datepicker .prev, .datepicker .next {
+      color: rgb(255, 255, 255);
+      transition: 0.3s;
+      width: 37px;
+      height: 37px;
+  }
+  .datepicker .prev:hover, .datepicker .next:hover {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.99);
+      font-size: 21px;
+  }
+  .datepicker .datepicker-switch {
+      font-size: 24px;
+      font-weight: 400;
+      transition: 0.3s;
+  }
+  .datepicker .datepicker-switch:hover {
+      color: rgba(255, 255, 255, 0.7);
+      background: transparent;
+  }
+  .datepicker table tr td span {
+      border-radius: 2px;
+      margin: 3%;
+      width: 27%;
+  }
+  .datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+    background-color: #fcc842 !important;
+    background-image: none;
+  }
+  .dropdown-menu {
+      border: 1px solid rgba(0, 0, 0, 0.288) !important;
+      box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;
+      padding: 0px !important;
+  }
+  .datepicker-dropdown.datepicker-orient-top:before {
+      border-top: 7px solid rgba(0,0,0,.1);
+  }

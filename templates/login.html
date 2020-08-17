@@ -1,0 +1,75 @@
+{% load static %}
+{% block content %}
+<!--When website will be deployed logic will be made that if user is logged he don't se login container-->
+{% if user.is_authenticated %}
+
+{% else  %}
+    <div id="login" class="boxSizeLogin">
+      <div class="bodyStyleLogin">
+        <div class="wrapperLogin" id="containerLogin">
+          <div class="form-containerLogin sign-up-containerLogin">
+            <div class="loginForm">
+            <div class="loginFormText">
+              <div class="accoutLogin createPos ">Create an account</div>
+              <div class="textCreatePos">Create your account and start the adventure<br/></div>
+              <a  href="{% url 'register' %}">
+                <button  class="btnLogin buttonPosLogin" > &nbsp;&nbsp;Sing&nbsp; up&nbsp;&nbsp; </button>
+              </a>
+
+            </div>
+            </div>
+          </div>
+          
+          <div class="form-containerLogin sign-in-containerLogin">
+            <form class="loginForm" action="" method="POST">
+              {% csrf_token %}
+              <div style="opacity:0.7;" class="titleTagLogin ">Welcome</div>
+
+              <input class="inpLogin" type="text" placeholder="Your username" name="username"/>
+              <input class="inpLogin" type="password" placeholder="Password" name="password" />
+        
+              <div class="buttonPosLogin">
+              <button  class="btnLogin" type="submit"  name='submit' value='sign_in'>&nbsp;&nbsp; Sign In&nbsp;&nbsp; </button>
+              </div>
+            </form>
+          </div>
+          <div class="overlay-containerLogin">
+            <div class="overlayLogin">
+              <div class="overlay-panelLogin overlay-leftLogin">
+                <div class="accoutLogin alreadyLogin">Already a customer?</div>
+                <p>Log in with your data </p>
+                <div class="buttonPosLogin">
+                  <button onclick="remove()" class="ghost btnLogin" id="signIn">&nbsp;&nbsp; Sign In &nbsp;&nbsp;</button>
+                </div>
+              </div>
+              <div class="overlay-panelLogin overlay-rightLogin">
+                <div class="titleTagLogin">Hi!</div>
+                <p class="pLogin">Create your account and start the adventure with best cars of the world</p>
+                <div class="buttonPosLogin">
+
+             
+                  <button onclick="myFunction()" class="ghost btnLogin" id="signUp">Sing up</button>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif  %}
+    {% include 'index.html'  %}
+    {% include 'latest.html'  %}
+    {% include 'us.html'  %}
+<script>
+        function myFunction() {
+          var element = document.getElementById("containerLogin");
+          element.classList.add("right-panel-activeLogin");
+        }
+        function remove() {
+          var element = document.getElementById("containerLogin");
+          element.classList.remove("right-panel-activeLogin");
+        }
+</script>
+
+{% endblock %}

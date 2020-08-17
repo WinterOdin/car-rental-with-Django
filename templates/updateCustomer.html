@@ -1,0 +1,91 @@
+{% include 'main.html' %}
+
+
+    <div class="wrapperUpdate">
+       
+    </div>
+    <div class="blockUpdate">
+        <div class="exitUpdate">
+            <a class="exitLinkUpdate" href="{% url 'customer' pk=current.id  %}">
+                <i class="exitIconUpdate fas fa-times-circle"></i>
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-6">
+                    <div class="customerPicture customerPictureUpdate">
+                        <img class="imgCustomer"  src='{{ current.customer.profilePic.url }}'>
+						
+					</div>
+                </div>
+                <div class="col-3">
+                    
+                </div>
+            </div>
+            <div class="row">
+               
+                <div class="col-12 ">
+                    <div class="updateGreetingText">
+                        
+                        “Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.”<b><i>-Rumi</i></b>
+  
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="experienceTitle updateTitle">
+                        Update your account
+                    </div>
+                </div>
+            </div>
+            <form action="" enctype="multipart/form-data" method="POST" >
+                {% csrf_token  %}
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="boxImgUpdate">
+                            {{ updateForm.profilePic  }}
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="inputBoxCustomer">
+                            {{ updateForm.name  }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="inputBoxCustomer">
+                            {{ updateForm.email  }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="inputBoxCustomer">
+                            {{ updateForm.phone  }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 ">
+
+                    </div>
+                    <div class="col-6 ">
+                        <div class="submitUpdate">
+                            <button type="submit" class="raise">Submit</button>
+                        </div>
+                    </div>
+                    <div class=" col-3 ">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    
+        

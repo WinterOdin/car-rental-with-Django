@@ -1,0 +1,327 @@
+.conPosCar{
+    margin-top: 2vh;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%
+}
+
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top: 20px;
+    z-index: 10000;
+}
+
+#custCarousel .carousel-indicators>li {
+    width: 100%;
+    height: auto;
+    
+}
+
+#custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.9
+}
+
+#custCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+
+#custCarousel .carousel-indicators li:hover img {
+    opacity: 0.95
+}
+
+.carousel-item img {
+    width: 100%
+}
+.xddd{
+    width: 100%;
+    height: 100%;
+}
+.img-fluid-check{
+    max-width: 100%;
+}
+.maxsizeCar{
+    height:80%;
+}
+.carousel-indicators{
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+}
+.formCar{
+    width: 100%;
+    height: 100%;
+    
+}
+.textareaCar{
+    border:none !important;
+    border-bottom: 2px solid #fcc842 !important;
+}
+#contact-form{
+    margin-top: 3vh;
+    
+}
+.contactCar{
+    color: #fcc842;
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+   
+   
+}
+.textCar{
+    color: black;
+    letter-spacing: -2px;
+    
+}
+.brandOfCar{
+    text-align:left;
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: 21px;
+    font-family: "Montserrat";
+    margin-bottom: -1vh; 
+}
+.modelOfCar{
+    text-align:left;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 29px;
+    margin-bottom: 1vh;
+    font-family: "Montserrat";
+}
+.carPricePos{
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 3vh;
+    
+}
+.carPrice{
+    min-width: 100%;
+    height: 70%;
+    background-color: #fcc842;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 26px;
+    text-align: center;
+    padding-top:4px;
+    color: white;
+    
+}
+.texesPriceCar{
+    min-width: 100%;
+    height: 30%;
+    background-color:#242424;
+    text-align: center;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    
+}
+.buttonCar{
+    width: 100%;
+    height: 12vh;
+    padding-top: 6vh;
+    display: none;
+}
+#buttonSendCar{
+    font-family: "Montserrat" !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding:10px 25px;
+}
+
+.reserveMobile{
+    margin-bottom: 5vh;
+    
+}
+.aboutCar{
+    margin-top:5vh;
+}
+.overviewCar{
+    font-size: 29px;
+    color: black;
+    transform: skew(-0.06turn);
+}
+.overviewTextCar{
+    font-family: "Roboto";
+    font-size: 18px;
+    padding-top: 2vh;
+    text-align: left;
+}
+.containerCrossCar{
+    width: 100%;
+    height: 100%;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+.infoCar1,.infoCar2,.infoCar3,.infoCar4{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+}
+.infoCar1,.infoCar3{
+    border-right: 2px solid  #fcc842;
+}
+.infoCar1,.infoCar2{
+    border-bottom: 2px solid  #fcc842;;
+}
+.iconCar{
+    position: absolute;
+    left:35%;
+    top:45%;
+    
+}
+.iconStyleCar{
+    color:#fcc842;
+    font-size: 27px;
+}
+.textIconCar{
+    position: absolute;
+    left:45%;
+    top:55%;
+    font-family: "Montserrat";
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+
+@media (min-width:720px){
+    .conPosCar{
+        margin-top: 5vh;
+    }
+    
+    .carPricePos{
+      
+        margin-bottom: 3vh;
+        margin-top: -5vh;
+        
+    }
+    .carPricePos{
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 3vh;
+        
+    }
+    .carPrice{
+        font-size: 26px;
+        padding-top:1.5vh;
+    }
+    .texesPriceCar{
+    padding-top: 5px;
+        
+    }
+    .reserveMobile{
+        display: none;
+    }
+    .buttonCar{
+        display: block;
+    }
+    .containerCrossCar{
+      
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+    .infoCar1,.infoCar2,.infoCar3,.infoCar4{
+        width: 100%;
+        height: 10vh;
+        position: relative;
+    }
+}
+
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 0;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 0px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button.thar-three {
+	color: rgb(68, 68, 68);
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid #fcc842;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+a.animated-button.thar-three:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: nthree;
+}
+a.animated-button.thar-three:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+a.animated-button.thar-three:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #fcc842;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+}

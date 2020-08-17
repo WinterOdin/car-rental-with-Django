@@ -1,0 +1,129 @@
+.sizeUs{
+    width: 100%;
+    height:auto;
+    margin-bottom: 7vh;
+}
+.faqUs {
+    font-family: Prompt,sans-serif;
+    font-weight: 500;
+    font-size: 25vh;
+    opacity: .3;
+    letter-spacing: -5px;
+    
+}
+.faqTextUs{
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+    margin-top: -10vh;
+}
+.questionUs{
+    min-width: 100%;
+    height: auto;
+    margin-top:3vh;
+
+ 
+}
+.numberUs,.textUs{
+    display: inline;
+    font-size: 25px;
+
+}
+.numberUs{
+    padding-right: 20px;
+    padding-left: 10px;
+    border-right: 1px solid gray;
+    color: #fcc842;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-align: center;
+    
+}
+.textUs{
+    padding-left: 10px;
+    font-family: Montserrat; 
+    font-size: 18px;
+    font-weight: 700;  
+    width: 100%;
+}
+.arrowsUS{
+    color: #fcc842;
+    font-size: 21px;
+    margin-left:10px;
+}
+.faqTextAnswer{
+    padding-top:6%;
+    font-family:'Lato';
+    font-size: 18px;
+}
+.aboutUsTitle{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #000;
+    font-size: 35px;
+    margin-top:4vh;
+    padding-bottom: 1vh;
+    text-align: right;
+    opacity: 0.7;
+}
+.aboutUsText{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: right;
+}
+img.pictUsFaq {
+    max-width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 5vh;
+      
+}
+.inputFieldGraph::-webkit-file-upload-button{
+    
+        color: white;
+        display: inline-block;
+        background: #fcc842;
+        border: none;
+        padding: 7px 15px;
+        font-weight: 700;
+        border-radius: 3px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 10pt;
+      }
+
+@media (min-width:720px){
+    .faqTextUs{
+        margin-left: 10vh;
+    }    
+    img.pictUsFaq {
+        max-width: 90%;
+        height: auto;
+        margin-top: 25vh; 
+    }
+    .aboutUsTitle{
+ 
+        text-align: center;
+ 
+    }
+    .aboutUsText{
+      
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

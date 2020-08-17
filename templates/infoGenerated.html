@@ -1,0 +1,104 @@
+{% extends 'main.html' %}
+{% load static  %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/formchose.css'  %}">	
+<link rel="stylesheet" href="{% static '/css/gridchose.css'  %}">	
+<div class='listCar'>
+    <div class='listHeaderCar'>
+       Mercedes-Benz 
+    </div>
+    {% for x in carDatabase  %}
+    <div class='listItemCar'>
+       <div class='listItemCar__inner'>
+         <div class="grid-container">
+            <div class="picChose">
+              <div class="pictureChose">
+                 <img class="responsiveChose" src="{{ x.car1.url  }}">
+              </div>
+            </div>
+            <div class="priceChose">
+              <div class="priceTagChose">
+                <div class="priceTextPosChose">
+                    Rent this car
+                </div>
+                 <div class="priceTagPosChose">
+                    {{ x.price  }}
+                 </div>
+              </div>
+            </div>
+            <div class="titleChose">
+              <div class="titlePosChose">
+                <div class="BrandTagChose">
+                    {{ x.marka  }}
+                </div>
+                <div class="modelTagChose">
+                    {{ x.model  }}
+                </div>
+                <div class="priceTagTitle">
+                    {{ x.price  }}
+                </div>
+              </div>
+            </div>
+            <div class="timeChose">
+              <div class="timePosChose">
+               <div class="iconTimeChose">
+                   <i class="fas fa-heartbeat"></i>
+               </div>
+               <div class="timeTextChose">
+                 0-100km/s
+               </div>
+               <div class="timeContentChose">
+                {{ x.time  }}s
+               </div>
+
+              </div>
+
+            </div>
+            <div class="hpChose">
+              <div class="hpPosChose">
+               <div class="iconTimeChose">
+                   <i class="fas fa-cog"></i>
+               </div>
+               <div class="timeTextChose">
+                 Torque
+               </div>
+               <div class="timeContentChose">
+                {{ x.nm  }}
+               </div>
+              </div>
+            </div>
+            <div class="kwChose">
+              <div class="kwPosChose">
+               <div class="iconTimeChose">
+                 <i class="fas fa-horse"></i>
+               </div>
+               <div class="timeTextChose">
+                 Horsepower
+               </div>
+               <div class="timeContentChose">
+                {{ x.hp  }}
+               </div>
+              </div>
+            </div>
+            <div class="btnChose">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-2">
+
+                   </div>
+                   <div class="col-8">
+                     <a href="{% url 'carPage' pk=x.pk %}" class="btn btn-sm animated-button thar-three">Lern More</a>
+                   </div>
+                   <div class="col-2">
+                    
+                   </div>
+                 </div>
+               </div>
+            </div>
+         </div>
+       </div>
+    </div>
+    {% endfor  %}
+ </div>
+   
+ {% endblock %}

@@ -1,0 +1,174 @@
+
+  
+  a,
+  [type="submit"] {
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+  }
+  
+  .signup__container {
+    position: relative;
+    margin-top: 20%;
+    
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 10px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+
+  .container__child {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+  }
+  
+  .signup__thumbnail {
+    position: relative;
+    padding: 2rem;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+            align-items: center;
+    background: url('/static/images/icon.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  
+  
+  .signup__form {
+    padding: 2.5rem;
+    background: #fdfdfd;
+  }
+  
+  label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  input.form-control {
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #fcc842;
+    outline: 0;
+  }
+  input.form-control:focus {
+    border: 0;
+    outline: 0;
+    -webkit-box-shadow: none;
+    border-bottom: 2px solid #ffd900;
+    box-shadow: none;
+  }
+  
+  input[type="text"] {
+    color: #111;
+  }
+  
+  input[type="password"] {
+    color: #111;
+  }
+  
+  .btn--form {
+    padding: 0.5rem 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ffdb81 !important;
+    border-radius: 2.1875rem;
+  }
+  .btn--form:focus, .btn--form:hover {
+    color:white;
+  }
+  .btn:hover{
+    color:white !important;
+  }
+  
+  .signup__link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #999;
+  }
+  .signup__link:focus, .signup__link:hover {
+    color: #787878;
+  }
+  .list-inline{
+    padding: 0 !important;
+  }
+  .login__div{
+    width: 100%;
+    text-align: right;
+    padding-top: 3%;
+  }
+  @media (max-width:480px){
+    .signup__thumbnail{
+      display: none;
+      padding: 0;
+    }
+    .container__child {
+      width: 100%;
+      height: 100%;
+      color: #fff;
+    }
+    .signup__container{
+      max-width: 93vw;
+      margin-top: 80%;
+    }
+    .signup__form{
+      padding: 2rem;
+    }
+    .m-t-lg{
+      padding-top: 1rem;
+    }
+    .BenzRent{
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 8%;
+  
+    }
+    .BenzRentText{
+      text-align: center;
+      font-size: 30px;
+      font-family: "Open Sans";
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+    .underline {
+      position: relative;
+      display: inline-block;
+  }
+  .underline:after {
+      content: '';
+      display: block;
+      width: 106%;
+      height: 5px;
+      background-color:#ffe100;
+      position: absolute;
+      left: -3%;
+      bottom: 12px;
+      z-index: -1;
+  }
+  
+    }
+  
+  
+  
+ 

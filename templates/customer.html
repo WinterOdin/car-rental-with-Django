@@ -1,0 +1,384 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="grid-containerCustomer">
+		<div class="backCustomer">
+			<div class="backCustomerPos">
+				<a class="backLinkCustomer"href="{% url 'home'  %}">
+					<i class="fas fa-arrow-circle-left customerArrow"></i>
+					<span class="backTextCustomer">Back to home</span>
+				</a>
+			</div>
+		</div>
+		<div class="customerInfo">
+			<div class="row no-gutters">
+				<div class="col-md-2 col-4">
+					<div class="customerPicture">
+						<img class="imgCustomer"  src='{{ current.customer.profilePic.url }}'>
+					</div>
+				</div>
+					<div class="col-md-10 col-8">
+						<div class="conCustomer">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<div class="customerName">
+                                    {{ current.customer.name }}
+                                </div>
+								</div>
+								<div class="col-md-2 col-sm-12">
+									<div class="customerId">
+										<div class="customerIdText">User ID:</div>
+										<div id="customerIdNumber">{{ current.id}}</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<div class="customerNumber">
+										<div class="numberNavCustomer">
+                                        Phone number:
+                                    </div>
+										<div class="numberDataNavCustomer">
+                                        {{ current.customer.phone }}
+                                    </div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12">
+									<div class="customerEmail">
+										<div class="numberNavCustomer">
+                                        Email:
+                                    </div>
+										<div class="numberDataNavCustomer">
+                                        {{ current.customer.email }}
+                                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="introduction">
+					<div class="row">
+						<div class="col-4">
+							<div class="introductionText">
+                            Introduction
+                        </div>
+						</div>
+						<div class="col-4"><!--placeholder for additional functions --></div>
+						<div class="col-4"><!--placeholder for additional functions --></div>
+					</div>
+				</div>
+			</div>
+			<div class="personalInfo">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="tilesCustomer">
+							<div class="row">
+								<div class="col-12">
+									<div class="personalTitle">
+                                    Account info
+                                </div>
+								</div>
+							</div>
+							<div class="grid-containerTile">
+								<div class="tileCustomer">
+									<div class="ageTileCustomer">
+										<div class="ageCustomer">
+                                    	Money spent:
+                                </div>
+										<div class="ageDataCustomer">
+										{% if totalPrice == None  %}
+											You 
+										{% else  %}
+											{{	totalPrice   }}
+										{% endif  %}
+                                </div>
+									</div>
+									<div class="dataTileCustomer">
+										<div class="dataTilePosCustomer">
+											<div class="dataTextRegister">
+                                        Registration date:
+                                    </div>
+									<div class="dataRegister">
+												{{ current.customer.dateCreated|date:"F j, Y"  }}
+                                    </div>
+										</div>
+									</div>
+									<div class="pickTileCustomer">
+										<div class="cityCustomer">
+                                    Last pick up:
+                                </div>
+										<div class="cityDataCustomer">
+									{% if lastOrder.pickUp == none %}
+										Need to 
+									{% else  %}
+									{{ lastOrder.pickUp }}
+									{% endif  %}
+                                </div>
+									</div>
+									<div class="carTileCustomer">
+										<div class="carCustomer">
+                                    Favourtie car:
+                                </div>
+										<div class="carDataCustomer">
+                                    {{ favCarList }}
+                                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="tilesCustomer">
+							<div class="row">
+								<div class="col-12">
+									<div class="personalTitle">
+                                    Your contact Info
+                                </div>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-md-5 col-sm-12">
+									<div class="xDD">
+										<div class="ageCustomer">
+                                        Phone number:
+                                    </div>
+										<div class="ageDataCustomer">
+										{{ current.customer.phone  }}
+                                    </div>
+									</div>
+								</div>
+								<div class="col-md-7 col-sm-12">
+									<div class="xDD">
+										<div class="ageCustomer">
+                                        Email:
+                                    </div>
+										<div class="ageDataCustomer">
+											{{ current.customer.email  }}
+                                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-2 ">
+			
+								</div>
+								<div class="col-8 ">
+									<div class="buttonOrderPos">
+										<a href="{% url 'updateView'  %}" class="btn btn-sm animated-button thar-three">Update your profile</a>
+									</div>
+								</div>
+								<div class=" col-2 ">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="lastRent lastRentPos">
+				<div class="row no-gutters">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="experienceTitle">
+									Your amg experience history 
+								</div>
+							</div>
+						</div>
+							
+						<div class="row no-gutters">
+                            <div class="col-2">
+                                <div class="headerTable">
+                                    Date:
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="headerTable infoID">
+                                    Order ID:
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="headerTable">
+                                    Car model:
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="headerTable">
+                                    Cancel:
+                                </div>
+							</div>
+							
+                        
+                        </div>
+
+                        {% for x in orderList %}
+							
+						<div class="row align-items-center">
+							<div class="col-md-12 col-sm-12 clickFaq ">
+								<div class="questionUs rowSize">
+									<div class="row no-gutters ">
+										<div class="col-2">
+											<div class="infoTable ">
+												{{ x.orderDate|date:'d/m/y' }}
+											</div>
+										</div>
+										<div class="col-1">
+											
+										</div>
+										<div class="col-5">
+											<div class="infoTable">
+											    {{ x.carModel}}
+											</div>
+										</div>
+										<div class="col-3">
+											<div class="infoTable">
+											{% if x.payed == False %}
+											<div class="payingPc">
+												<a href="{% url 'cancelOrder' pk=x.id   %}">Cancel this order</a>
+											</div>
+											<div class="payingMobile">
+												<a href="{% url 'cancelOrder' pk=x.id   %}">Cancel</a>
+											</div>
+											
+											{% else  %}
+											 Payed
+											{% endif  %}
+											</div>
+										</div>
+										<div class="col-1">
+											<div class="infoTable">
+												<i class="fas fa-arrow-circle-down .displayFaq arrowsUS"></i>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="moreInfoCon open">
+									<div class="row no-gutters">
+										<div class="col-8">
+											<div class="row no-gutters">
+												<div class="col-8 col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Pick Up Date :
+													</div>
+												</div>
+												<div class="col-4 col-md-6">
+													<div class="addInfo">
+														{{ x.startRent|date:'d/m/y' }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Drop Off Date :
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.endRent|date:'d/m/y' }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Full fuel :
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.fullFuel }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Aditional Insurance :
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.insurance  }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Pick up place :
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.pickUp   }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														Total price :
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.price  }}
+													</div>
+													
+												</div>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-8  col-md-6">
+													<div class="addInfo paddingAddInfo">
+														order ID
+													</div>
+												</div>
+												<div class="col-4  col-md-6">
+													<div class="addInfo">
+														{{ x.id  }}
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="col-4">
+											
+										<div class="buttonInvoice">
+											<a class='invoiceLink'href="#">invoice</a>
+										</div>
+										 
+										</div>
+									
+										
+									</div>
+								</div>
+							</div>
+						</div>
+                        {% endfor  %}
+
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+{% endblock  %}

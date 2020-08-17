@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+
+</head>
+        <body>
+            <!-- Content for Static Frame 'header_frame' -->
+            <div id="header_content">
+                <h3>AMG Renting Company</h3>
+            </div>
+        
+            <!-- Content for Static Frame 'footer_frame' -->
+            <div id="footer_content">(c) - page <pdf:pagenumber>
+                of <pdf:pagecount>
+            </div>
+        
+            <!-- HTML Content -->
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        order ID:
+                    </div>
+                    <div class="col-2">
+                        {{ cleanData.id  }}
+                    </div>
+                    <div class="col-md-2">
+                       customer ID:
+                    </div>
+                    <div class="col-2">
+                        {{ cleanData.customerID  }}
+                    </div>
+                    <div class="col-2">
+                        car model:
+                    </div>
+                    <div class="col-2">
+                        {{ cleanData.carModel  }}
+                    </div>
+                </div>
+       
+            </div>
+        
+        
+           
+            
+            <p><strong>Total:  {{ cleanData.price  }}$</strong></p>
+        </body>
+</html>

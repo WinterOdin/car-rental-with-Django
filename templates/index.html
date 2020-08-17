@@ -1,0 +1,61 @@
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="btnFormPosCar" id="selector">
+    <div class="container-fluid ">
+        <form method="post" id="indexForm" action="{% url 'infoGenerated'  %}" data-courses-url="{% url 'ajax_load'  %}">
+            {% csrf_token  %}
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="textCarSearch">
+                            Hi {{  request.user }},  search for your new <span class="underlineCar"><i>AMG</i>!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <select name="carYear" id="carYear" class=" selectControlCar" >
+                            <option value="">select the year </option>
+                            {% for i in year  %}
+                            <option value="{{  i.id  }}">{{ i.name  }}</option>
+                            {% endfor  %}
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <select name="carModel" id="carModelId" class=" selectControlCar" >
+                            <option value="">select the car model</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="searchBtnCar">
+                            <input type="submit" value="Submit" class="btnLogin"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $("#carYear").change(function(){
+        var url    = $('#indexForm').attr("data-courses-url");
+        var year_id = $(this).val();
+        $.ajax({
+            url:url,
+            data:{
+                'carYear':year_id
+            },
+            success:function(data){
+                $("#carModelId").html(data);
+            }
+
+
+
+        });
+
+
+    });
+</script>
+{% endblock  %}

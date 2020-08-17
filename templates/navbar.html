@@ -1,0 +1,44 @@
+
+{% load static  %}
+
+<div class="homeWrapper">
+        <header>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="{% url 'home'  %}">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#faqs" class="scroll">About us</a></li>
+                    
+                    
+                    <!--page is in demo mode after deployment logic will be made here-->
+                    {% if user.is_authenticated  %}
+                        <li><a href="{% url 'customer' pk=current.id %}">Customer</a></li>
+                    {% else  %} 
+                        <li><a class="scroll" href="#login">Login</a></li>
+                    {% endif %}
+                    {% if request.user.is_staff  %}
+                        <li><a href="{% url 'graph'  %}">Data</a></li>
+                    {%endif%}
+                    
+                </ul>
+            </nav>
+            
+            <p class="menu cta">Menu</p>
+            {% if user.is_authenticated  %}
+            <a class="cta" href="{% url 'logout'  %}">Log out</a>
+            {% endif %}
+        </header>
+        <div class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                {% if user.is_authenticated  %}
+                <li><a href="{% url 'customer' pk=current.id %}">Customer</a></li>
+                {% else  %} 
+                <li><a href="">Login</a></li>
+                {% endif %}
+                <li><a href="{% url 'home'  %}">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About us</a></li>
+            </div>
+        </div>
+</div>

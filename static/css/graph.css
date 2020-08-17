@@ -1,0 +1,62 @@
+.dashboardTitle,.addCarTitle,.titleAddCar{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5vh;
+    text-transform: uppercase;
+    font-style: 20px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+.titleAddCar{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+.dashboardPic{
+    width: 100%;
+}
+.selectYearGraph{
+    width: 95%;
+    
+}
+img.dashPic{
+    max-width: 30%;
+    margin-left: 35%;
+    margin-top:2%;
+}
+input.inputFieldGraph{
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 95%;
+    border-bottom: 1px solid #fcc842;
+    border-radius: 5px;
+}
+.raiseGraph{
+    margin-left: -5% !important;
+  
+}
+@media (min-width:720px){
+    .over{
+        overflow-x: hidden;
+    }
+  .rowPosDesktop{
+      position: absolute;
+      bottom: 0;
+  }
+  .submitAddCar{
+    width: 100%;
+  }
+  .raiseGraph{
+      margin-left: 40% !important;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  .selectYearGraph{
+      margin-top: 1vh;
+      
+  }
+}

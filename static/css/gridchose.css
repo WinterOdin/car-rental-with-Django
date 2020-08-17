@@ -1,0 +1,49 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr  0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  gap: 1px 1px;
+  grid-template-areas: "picChose" "titleChose" "timeChose" "hpChose" "kwChose" "btnChose";
+}
+
+.picChose { grid-area: picChose; }
+
+.priceChose { grid-area: priceChose; }
+
+.titleChose { grid-area: titleChose; }
+
+.timeChose { grid-area: timeChose; }
+
+.hpChose { grid-area: hpChose; }
+
+.kwChose { grid-area: kwChose; }
+
+.btnChose { grid-area: btnChose; }
+
+
+@media (min-width:770px){
+
+  .grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "picChose titleChose titleChose priceChose" "picChose timeChose hpChose kwChose" "picChose btnChose btnChose btnChose";
+}
+
+.priceChose { grid-area: priceChose; }
+
+.titleChose { grid-area: titleChose; }
+
+.timeChose { grid-area: timeChose; }
+
+.hpChose { grid-area: hpChose; }
+
+.kwChose { grid-area: kwChose; }
+
+.btnChose { grid-area: btnChose; }
+
+.picChose { grid-area: picChose; }
+
+}

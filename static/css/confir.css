@@ -1,0 +1,164 @@
+.borderConf{
+    border-bottom: 1px solid #dbdbdb;
+    max-width: 100%;
+    height: 2vh;
+   
+}
+.infoOrderConf{
+    color: #fcc842;
+    font-family: "Montserrat";
+}
+.dataConfPic{
+    min-width: 100%;
+}
+.responsiveDataPic{
+    max-width: 155%;
+    border-radius: 4px;
+    padding-bottom: 5vh;
+
+}
+.titleModel{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.titleConf{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    opacity: 0.7;
+    height: 5vh;
+
+}
+.dataConf{
+    font-family: "Montserrat";
+    font-size: 15px;
+    opacity: 0.8;
+}
+.aboutTrans{
+    font-family: "Montserrat";
+    text-align: right;
+    font-size: 22px;
+    padding-top: 2vh;
+    opacity: 0.9;
+    padding-bottom: 2vh;
+}
+
+.textTrans{
+    font-family: "Montserrat";
+    text-align: left;
+    font-size: 16px;
+    opacity: 0.7;
+    padding-bottom: 2vh
+}
+
+.posTrans{
+    margin-top: 5vh;
+}
+
+input.cardOrderInput{
+    margin-bottom: 4%;
+}
+
+.cardOrderInput{
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+::placeholder{
+    color: #c3c3d3;
+    font-family: "Lato";
+}
+button.btnCard{
+    border-radius: 20px !important;
+    border: 0;
+    background-color: #fcc842;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 3vh;
+}
+button.btnCardPos{
+    margin-left: 2vw;
+}
+.posCardButtons{
+    margin-bottom: 4vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:720px){
+    .borderConf{
+        display: none;  
+    }
+    .responsiveDataPic{
+        max-width: 155%;
+        padding-bottom: 3vh;
+    }
+    .titleModel{
+        font-size: 28px;
+    }
+    
+    .titleConf{
+        font-size: 18px;
+        height: 5vh;
+    }
+    .dataConf{
+        font-size: 17px;
+    }
+    .borderLeftConf{
+        border-left: 1px solid #dbdbdb;
+        border-right: 1px solid #dbdbdb;
+    
+    }
+    .borderRightConf{
+        border-right: 1px solid #dbdbdb; 
+    }
+    .posConf{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}

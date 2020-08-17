@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.grid-container {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "title title" "time time" ". ." "car1 car1" "car1 car1" "car2 car2" "petronas petronas";
+  }
+  
+  .title { grid-area: title; }
+  
+  .time { grid-area: time; }
+  
+  .chose { grid-area: chose; }
+  
+  .petronas { grid-area: petronas; }
+  
+  .car1 { grid-area: car1; }
+  
+  .car2 { grid-area: car2; }
+  
+  .car3 { grid-area: car3; }
+
+
+  
+  @media (min-width:720px){
+    .grid-container {
+        display: grid;
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "title title title . . . time time time" "chose . car1 car1 car1 car1 car1 car2 car2" "chose . car1 car1 car1 car1 car1 car3 car3" "chose . car1 car1 car1 car1 car1 link link" "petronas petronas petronas petronas petronas petronas petronas petronas petronas";
+      }
+      
+      .time { grid-area: time; }
+      
+      .car2 { grid-area: car2; }
+      
+      .car3 { grid-area: car3; }
+      
+      .link { grid-area: link; }
+      
+      .car1 { grid-area: car1; }
+      
+      .chose { grid-area: chose; }
+      
+      .petronas { grid-area: petronas; }
+      
+      .title { grid-area: title; }
+
+  }

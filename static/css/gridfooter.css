@@ -1,0 +1,56 @@
+.grid-container-footer {
+    display: grid;
+   ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.5fr 1fr 0.5fr 1.5fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas: "time" "terms" "phone" "faq" "office" "who";
+  }
+  
+  .time { grid-area: time; }
+  
+  .terms { grid-area: terms; }
+  
+  .phone { grid-area: phone; }
+  
+  .faq { grid-area: faq; }
+  
+  .office { grid-area: office; }
+  
+  .who { grid-area: who; }
+  
+  .xd{
+    background-color: pink;
+    width: 100%;
+    height: 10vh
+  }
+  
+  
+    @media (min-width:720px){
+        .grid-container-footer {
+        display: grid;
+        
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
+        gap: 1px 1px;
+        grid-template-areas: "time terms office" "time phone office" "time faq office" "who who who";
+      }
+  
+        .time { grid-area: time; }
+  
+        .office { grid-area: office; }
+  
+        .terms { grid-area: terms; }
+  
+        .phone { grid-area: phone; }
+  
+        .faq { grid-area: faq; }
+  
+        .who { grid-area: who; }
+  
+  
+  
+  
+  }
+  

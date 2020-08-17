@@ -1,0 +1,193 @@
+{% extends 'main.html' %} {% block content %}
+<div class="container posConf">
+    <div class="row">
+        <div class="col-md-6 col-12 borderLeftConf">
+            <div class="row">
+                <div class="col-12">
+                    <div class="infoOrderConf">
+                        Your order info
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="titleModel">
+                        <i>{{ car.model }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="dataConfPic">
+                        <img class="responsiveDataPic" src="{{ car.car1.url  }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Pick up place:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ place }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Pick up date:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ startDate }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Drop off date:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ endDate }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Total price:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ priceTotal }}$</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Full tank:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ fuel }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <div class="titleConf">
+                        Insurance:
+                    </div>
+                </div>
+                <div class="col-md-8 col-7">
+                    <div class="dataConf">
+                        <i>{{ insurance }}</i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-5">
+                    <a href="{% url 'pdfView' pk=currentOrder %}">
+                        See PDF invoice
+                    </a>
+                </div>
+                <div class="col-md-8 col-7">
+                    <a href="{% url 'pdfDownload' pk=currentOrder %}">
+                        Download invoice
+                    </a>
+                </div>
+            </div>
+            <div class="borderConf"></div>
+        </div>
+        <div class="col-md-6 col-12 borderRightConf">
+            <div class="row">
+                <div class="col-12">
+                    <div class="infoOrderConf">
+                        Make a payment
+                    </div>
+                </div>
+            </div>
+            <div class="posTrans">
+                <div class="row">
+                    <div class="col-12">
+                       <div class="aboutTrans">
+                          <i> Safe Transactions</i>
+                       </div>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-12">
+                        <div class="textTrans">
+                            Due to coronavirus pandemic we suggest to pay for your AMG expirience via credit card rather than paying cash at your pick up location.  
+                        </div>
+                    </div>
+                </div>     
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="{% url 'payment' pk=currentOrder  %}" method="POST" id="payment-form">
+                                {% csrf_token  %}
+                            <div class="form-row">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <input class=" cardOrderInput"  value="" name='phoneCardAuth' placeholder="Your phone number">  
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                       
+                                        <input if='email' class=" cardOrderInput" name='emailCardAuth' placeholder="Your email">  
+                                    </div>
+                                </div>
+                              
+                               
+                               
+                                <div id="card-element">
+                                <!-- A Stripe Element will be inserted here. -->
+                                </div>
+    
+                                <!-- Used to display form errors. -->
+                                <div id="card-errors" role="alert"></div>
+                            </div>
+                            <div class="row posCardButtons">
+                                <div class="col-4">
+                                  
+                                </div>
+                                <div class="col-4">
+                                    
+                                </div>
+                                <div class="col-4">
+                                    <button class="btnCard btnCardPos">Pay </button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        <div class="row posCardButtons">
+                            <div class="col-3">
+
+                            </div>
+                            <div class="col-6">
+                                <a href="{% url 'home'   %}" class="btn btn-sm animated-button thar-three">back to home</a>
+                            </div>
+                            <div class="col-3">
+                             
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    
+</script>
+{% endblock %}

@@ -1,0 +1,4 @@
+<option value="">select model</option>
+    {% for x in selectedCar %}
+<option value="{{ x.pk  }}">{{ x.model }}</option>
+    {% endfor  %}
