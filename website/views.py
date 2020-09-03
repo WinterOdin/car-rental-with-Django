@@ -14,7 +14,7 @@ import stripe
 from django.contrib.auth.decorators import login_required
 
 
-stripe.api_key = 'sk_test_51HEYqgEPUz3ZLxoXSeaw8yhcTQK7MNGnk57g7O6juKU4L4SSUbjNgE0vVjCEzehX2DZMLpPSFha9sMBEXeLXPRS100v3J11TXs'
+stripe.api_key = ''#set this in console
 
 def home(request):
     faqs            = Faq.objects.all()
