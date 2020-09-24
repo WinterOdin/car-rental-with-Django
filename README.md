@@ -7,4 +7,4 @@ To run this project you need to install all the dependencies in requirements.txt
 In further releases the gallery will be added.
 
 If you wanna check out the page there is a screenshot folder
-(https://github.com/WinterOdin/car-rental-with-Django/blob/master/screenshot/index.png)
+![screen](https://github.com/WinterOdin/car-rental-with-Django/blob/master/screenshot/index.png)
