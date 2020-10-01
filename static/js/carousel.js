@@ -15,10 +15,10 @@ $('.wrapper').each(function() {
   });
 
   $slider.on('slide.changed', function() {
-    console.log('slide changed !');
+  
     $('.nav-dot').removeClass('active');
     var $activeDot = $('.nav-dot[data-slide="' + $('.panel._active').data('slide') + '"]');
-    console.log();
+ 
     $activeDot.addClass('active');
   });
 
@@ -38,7 +38,9 @@ $('.wrapper').each(function() {
 
 
     var slideIndex = $slider.find('.panel._active').index('.panel');
-    console.log(slideIndex);
+ 
+
+  
 
     if (slideIndex >= numberOfSlides || slideIndex <= -1) {
       firstSlide();
@@ -59,7 +61,8 @@ $('.wrapper').each(function() {
     $prevSlide.addClass('_active');
 
     var slideIndex = $slider.find('.panel._active').index();
-    console.log(slideIndex);
+   
+    
 
     if (typeof $prevSlide === 'undefined' || $prevSlide === null || $prevSlide.length == -1 || slideIndex <= -1) {
       lastSlide();

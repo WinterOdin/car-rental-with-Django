@@ -275,3 +275,9 @@ def cancelOrder(request,pk):
 
    
     return redirect ('home')
+
+def gallery(request):
+
+    context = {}
+
+    return render ( request, 'gallery.html', context)
