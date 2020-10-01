@@ -4,7 +4,7 @@ I always loved one particular car manufacturer so I made this website that let's
 !(all the logos used in this project are owned by Mercedes-Benz and are used only for testing purposes)!
 
 To run this project you need to install all the dependencies in requirements.txt
-In further releases the gallery will be added.
+In further releases the gallery will be added and the picture will be changed becouse some have wrong size 
 
 If you wanna check out the page there is a screenshot folder
 ![screen](https://github.com/WinterOdin/car-rental-with-Django/blob/master/screenshot/index.png)
