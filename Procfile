@@ -1,0 +1,1 @@
+web: gunicorn AMG.wsgi --log-file-
