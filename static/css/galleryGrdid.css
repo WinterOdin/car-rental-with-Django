@@ -14,10 +14,20 @@
   .pic1 { grid-area: pic1;
   width: 100%;
   height: 40vh;
-  background-color: aqua; 
+
   
  
 }
-  .pic2 { grid-area: pic2; }
-  .pic3 { grid-area: pic3; }
-  .pic4 { grid-area: pic4; }
+  .pic2 { grid-area: pic2;
+    width: 100%;
+    height: 40vh;
+
+  }
+  .pic3 { grid-area: pic3;
+    width: 100%;
+    height: 40vh;
+     }
+  .pic4 { grid-area: pic4;
+    width: 100%;
+    height: 40vh;
+  }
