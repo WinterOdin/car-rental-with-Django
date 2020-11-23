@@ -1,23 +1,18 @@
 {% extends 'main.html' %} {% block content %}
 <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
 <div class="car1">
-    <div class="gtText">
-        <div class="gtTextContainer">
-            "gt"
-        </div>
-    </div>
-    <div class="grid-container-car1">
-        <div class="pic1">
+    
+    <div class="container">
+        <div class="row">
+        {% for x in data  %}
+        <div class="col-sx-12 col-md-6 col-lg-6">
+            <div class="galleryPictures">
+                <div class="galleryPicturesPosition" style="background-image: url('/images/{{ x }}')">
 
+                </div>
+            </div>
         </div>
-        <div class="pic2">
-
-        </div>
-        <div class="pic3">
-
-        </div>
-        <div class="pic4">
-            
+        {% endfor  %}
         </div>
     </div>
 </div>

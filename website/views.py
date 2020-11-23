@@ -12,7 +12,7 @@ from .forms import *
 from django.core import serializers
 import stripe
 from django.contrib.auth.decorators import login_required
-
+import itertools 
 
 stripe.api_key = ''#set this in console
 
@@ -277,7 +277,22 @@ def cancelOrder(request,pk):
     return redirect ('home')
 
 def gallery(request):
+    picList = ['car1','car3','car5']
+    pictureList = []
+    
+    for x in picList:
+        photo = Car.objects.values_list(x)
+        pictureList.append(photo)
 
-    context = {}
+    
+    
+    data = list(itertools.chain(*pictureList)) 
+    data = list(itertools.chain(*data)) 
+    data = list(filter(None, data))
+    
+  
+    context = {
+        'data':data[::-1]
+    }
 
     return render ( request, 'gallery.html', context)
