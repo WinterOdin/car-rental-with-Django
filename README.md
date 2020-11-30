@@ -4,7 +4,7 @@ This is a car rental project made with Django | Chart.js | Jquery | Bootstrap 4 
 I always loved one particular car manufacturer so I made this website that let's you rent most thrilling vehicles from this manufacturer portfolio
 
 ## Important info
-You need to create dummy account to "rent out" cars
+You need to create dummy account to "rent out" cars. You need to know that the hosting is free so the app is freezed when no one is physically on the website hence long loading times
 
 ## How to check it out
 If you don't like to install random projects from github just [click here](https://car-rental-with-django.herokuapp.com/) but you need to know that the hosting is free so the app is freezed when no one is physically on the website hence long loading times.
